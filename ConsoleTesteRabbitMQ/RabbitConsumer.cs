@@ -20,7 +20,7 @@ namespace RabbitMQExample
             };
 
             // Conexão e canal "à moda antiga"
-            var connection = factory.CreateConnection();
+            var connection = factory.CreateConnection(); //O ideal era usar um método assícrono aqui mas essa versão do RabbitMQ não permite isso, assincronidade só tá disponível a partir da 7.0.0 de acordo com a documentação.
             var channel = connection.CreateModel();
 
             channel.QueueDeclare(

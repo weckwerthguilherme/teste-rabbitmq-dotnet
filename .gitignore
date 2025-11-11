@@ -1,9 +1,8 @@
-# Arquivo de segredos
-secrets.config
 
-# Pastas de Build (Binários)
-[Bb]in/
-[Oo]bj/
+
+# Ignora bin/obj de QUALQUER projeto
+*/bin/
+*/obj/
 
 # Pacotes do NuGet
 packages/
@@ -11,11 +10,13 @@ packages/
 # Arquivos de usuário do Visual Studio
 *.suo
 *.user
-*.userosscache
-*.sln.docstates
-
-# Pasta .vs (Configurações locais do VS)
 .vs/
+
+# Pacotes (se você ainda os tiver no repo, o que não é ideal)
+*/packages/
+
+# Arquivo de segredos
+secrets.config
 
 # Ignorar arquivos de designer de config
 secrets.Designer.cs
